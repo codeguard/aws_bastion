@@ -32,6 +32,7 @@ The user can use the keypair from that ec2 instance to ssh to port 2222 as one o
 
 # Mechanism:
 * The whole thing will compile into a multicall go binary. The multicall go binary will have three modes, and will launch docker instances from a purpose-built docker image. The only thing that the docker image will do is launch an openssh daemon with a custom config for a single connection, and that openssh instance will then call the multicall go binary.
+* This project will depend on docker, and two specific docker containers, one with an openssh server, and one with redis.
 
 
 
